@@ -2,7 +2,12 @@
 {
   let accuracy = 1000000000000;
   let koyaku_kakuritu_p = [];
-  let bell = [18.70, 17.88, 17.04, 15.86, 15.09, 14.83];
+  // let bell = [18.70, 17.88, 17.04, 15.86, 15.09, 14.83];
+let cherry_kakuritu = [26.214, 25.206, 24.273, 23.406];
+let suika_kakuritu = [47.628, 45.958, 42.946, 41.584];
+let hosi_kakuritu = [19.968, 19.378, 18.296, 17.561];
+let hazure_kakuritu = [11.498, 10.923, 9.930, 9.362];
+
   let dankai = 4;
   // IniSet();
 
