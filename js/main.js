@@ -1,15 +1,25 @@
 'use strict';
 {
   let accuracy = 1000000000000;
-  let koyaku_kakuritu_p = [];
-  // let bell = [18.70, 17.88, 17.04, 15.86, 15.09, 14.83];
-let cherry_kakuritu = [26.214, 25.206, 24.273, 23.406];
-let suika_kakuritu = [47.628, 45.958, 42.946, 41.584];
-let hosi_kakuritu = [19.968, 19.378, 18.296, 17.561];
-let hazure_kakuritu = [11.498, 10.923, 9.930, 9.362];
 
+  let cherry_kakuritu = [26.214, 25.206, 24.273, 23.406];
+  let suika_kakuritu = [47.628, 45.958, 42.946, 41.584];
+  let hosi_kakuritu = [19.968, 19.378, 18.296, 17.561];
+  let hazure_kakuritu = [11.498, 10.923, 9.930, 9.362];
+  let nabinasi_kakuritu = [2.579, 2.638, 2.750, 2.834];
+  
   let dankai = 4;
-  // IniSet();
+  //何段階設定か
+  
+  GetKoyakuKakuritu(cherry_kakuritu);
+  GetKoyakuKakuritu(suika_kakuritu);
+  GetKoyakuKakuritu(hosi_kakuritu);
+  GetKoyakuKakuritu(hazure_kakuritu);
+  GetKoyakuKakuritu(nabinasi_kakuritu);
+
+  
+  
+  
 
   document.querySelector('button').addEventListener('click', Zikkou);
 
@@ -29,7 +39,6 @@ let hazure_kakuritu = [11.498, 10.923, 9.930, 9.362];
       return;
     }
 
-    GetKoyakuKakuritu(bell);
 
     let goukei = 0n;
     let kakuritu = [];
@@ -57,14 +66,16 @@ let hazure_kakuritu = [11.498, 10.923, 9.930, 9.362];
 
   function GetKoyakuKakuritu(array) {
     // koyaku_kakuritu_p.splice(0);
+  let koyaku_kakuritu_p = [];
 
     for (let i = 0; i < dankai; i++) {
-      let id = 'p' + (i + 1);
-      console.log(id);
+      
+      // console.log(id);
       koyaku_kakuritu_p.push(BigInt(Math.floor(1 / array[i] * accuracy)));
       // koyaku_kakuritu_p.push(BigInt(Math.floor(1/document.getElementById(id).value * accuracy)));
       console.log(koyaku_kakuritu_p[i]);
     }
+    return koyaku_kakuritu_p;
   }
 
 
@@ -82,5 +93,5 @@ let hazure_kakuritu = [11.498, 10.923, 9.930, 9.362];
     return val;
   }
 
-  
+
 }
