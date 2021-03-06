@@ -52,9 +52,11 @@
         CalcBinom(art, rep, nabinasi_kakuritu)[i]);
       goukei += hiritu[i];
     }
+
     hiritu.forEach(e => {
       result.push(Math.round((parseFloat(e / goukei * 100)) * 100) / 100);
     });
+
     // console.log(hiritu);
     // console.log(goukei);
     console.log(result);
