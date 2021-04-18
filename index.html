@@ -9,7 +9,8 @@
 </head>
 
 <body>
-<h2>ディスクアップ判別</h2>
+  <h2>ディスクアップ判別</h2>
+
   <body>
     <div class="flexcontainer">
       <div class="flexitem item1">総回転</div>
@@ -34,8 +35,36 @@
     </div>
 
     <div class="flexcontainer">
+      
+      
+      <div class="flexitem item1">共通☆(ART中)</div>
+      <div class="flexitem item1">ハズレ(ART中)</div>
+      
+      <div class="flexitem item1">
+        <button id="hosi_btn" class="noselect">加算</button>
+        <input type="number" id="hosi" value="0" min="0">
+      </div>
+      <div class="flexitem item1">
+        <button id="hazure_btn" class="noselect">加算</button>
+        <input type="number" id="hazure" value="0" min="0">
+      </div>
+      
+      
+      
+      <div class="flexitem item2">ナビ無しリプ(ART中)</div>
+      <form id="target" class="flexitem item2 setumei">
+        <input name="hoge" type="radio" class="radio setumei" value="nouse" checked> 考慮しない
+        <input name="hoge" type="radio" class="radio setumei" value="use" > 考慮する
+        <!-- <input type="checkbox" id="rep_cb" class="checkbox">※ナビ無しリプのオンオフ※工事中</div> -->
+      </form>
+      <div class="flexitem item2">
+        <button id="rep_btn" class="noselect">加算</button>
+        <input type="number" id="rep" value="0" min="0">
+      </div>
+      
       <div class="flexitem item1">今回D.T</div>
       <div class="flexitem item1">今回DJzone</div>
+
       <div class="flexitem item1">
         <input type="number" id="dt_art" value="0" min="0">
         <button id="dt_btn" class="noselect">総ARTに追加</button>
@@ -46,26 +75,6 @@
         <button id="djz_btn" class="noselect">総ARTに追加</button>
       </div>
 
-
-      <div class="flexitem item1">共通☆(ART中)</div>
-      <div class="flexitem item1">ハズレ(ART中)</div>
-      <div class="flexitem item1">
-        <button id="hosi_btn" class="noselect">加算</button>
-        <input type="number" id="hosi" value="0" min="0">
-      </div>
-      <div class="flexitem item1">
-        <button id="hazure_btn" class="noselect">加算</button>
-        <input type="number" id="hazure" value="0" min="0">
-      </div>
-
-      <div class="flexitem item2"><input type="checkbox" id="rep_cb" class="checkbox">ナビ無しリプのオンオフ※工事中</div>
-
-      <div class="flexitem item2">ナビ無しリプ(ART中)</div>
-
-      <div class="flexitem item1">
-        <button id="rep_btn" class="noselect">加算</button>
-        <input type="number" id="rep" value="0" min="0">
-      </div>
     </div>
 
     <div class="flexcontainer">
@@ -92,7 +101,7 @@
       </div>
     </div>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 
 </html>

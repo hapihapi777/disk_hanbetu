@@ -1,6 +1,7 @@
 'use strict';
 {
   Button_General();
+  GetRadio();
 
   let accuracy = 1000000000000;
   let dankai = 4; //何段階設定か
@@ -128,6 +129,7 @@
 
   // ボタン全般関数
   function Button_General() {
+
     document.getElementById('hanbetu').addEventListener('click', Zikkou);// 判別ボタン
 
     Button_Keisan('cyori_btn', 'cherry', 1);// チョリボタン
@@ -157,6 +159,18 @@
     document.getElementById(x).addEventListener('click', function () {
       document.getElementById(y).value = parseInt(document.getElementById(y).value) + z;
     });
+  }
+
+  function GetRadio() {
+      let target = document.getElementById("target");
+      let s = target.hoge.value;
+      // console.log(s);
+      if(s === 'use') {
+        document.getElementById('rep_btn').disabled = false;
+      }else if(s === 'nouse') {
+        document.getElementById('rep_btn').disabled = true;
+      }
+      // return s;
   }
 
 }
