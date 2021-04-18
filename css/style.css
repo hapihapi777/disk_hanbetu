@@ -66,6 +66,7 @@ input {
   color: gray;
   margin: 0px;
   border-radius: 4px;
+  height: 26px;
 }
 
 #suika_btn {
@@ -74,6 +75,7 @@ input {
   color: gray;
   margin: 0px;
   border-radius: 4px;
+  height: 26px;
 }
 
 #djz_btn {
@@ -81,6 +83,7 @@ input {
   border-radius: 4px;
   background-color: rgb(25, 167, 250);
   border-color: rgb(25, 167, 250);
+  height: 26px;
 }
 
 #tuika_btn {
@@ -88,12 +91,14 @@ input {
   border-radius: 4px;
   background-color: rgb(25, 167, 250);
   border-color: rgb(25, 167, 250);
+  height: 26px;
 }
 
 #hazure_btn {
   margin: 0 0 0 0px;
   border-radius: 4px;
   border-color: gray;
+  height: 26px;
 }
 
 #hosi_btn {
@@ -102,6 +107,7 @@ input {
   background-color: yellow;
   border-color: yellow;
   color: gray;
+  height: 26px;
 }
 
 #rep_btn {
@@ -109,6 +115,7 @@ input {
   border-radius: 4px;
   background-color: rgb(25, 167, 250);
   border-color: rgb(25, 167, 250);
+  height: 26px;
 }
 
 #hanbetu {
