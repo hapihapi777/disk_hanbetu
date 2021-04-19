@@ -43,16 +43,18 @@
     let target = document.getElementById("target"); //ラジオボタン
     let s = target.hoge.value;
 
+    let bug = document.getElementById('error');
     // エラー表示
     if (soukaiten <= 0 || soukaiten < art || soukaiten < koyaku_all
       || art < koyaku_art) {
-      document.getElementById('error').textContent = "入力値を見直してください";
+      bug.textContent = "入力値を見直してください";
       console.log('えらー');
       return;
     }
 
     // 期待値算出
     if (art <= 0) {
+      bug.textContent = "";
       for (let i = 0; i < dankai; i++) {
         hiritu.push(
           CalcBinom(soukaiten, cherry, cherry_kakuritu)[i] // チェリーで期待値
@@ -64,6 +66,7 @@
         goukei += hiritu[i];
       }
     } else if (s === 'nouse') {
+      bug.textContent = "";
       for (let i = 0; i < dankai; i++) {
         hiritu.push(
           CalcBinom(soukaiten, cherry, cherry_kakuritu)[i] // チェリーで期待値
@@ -75,6 +78,7 @@
         goukei += hiritu[i];
       }
     } else {
+      bug.textContent = "";
       for (let i = 0; i < dankai; i++) {
         hiritu.push(
           CalcBinom(soukaiten, cherry, cherry_kakuritu)[i] // チェリーで期待値

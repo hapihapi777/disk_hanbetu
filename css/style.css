@@ -1,8 +1,9 @@
 *:focus {
   outline: none;
 }
-h2 {
+h3 {
   margin: 2px;
+  color: rgb(25, 167, 250);
 }
 
 body {
