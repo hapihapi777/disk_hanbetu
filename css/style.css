@@ -12,13 +12,14 @@ body {
 }
 
 input {
-  width: 60px;
+  width: 48px;
   font-size: 20px;
   color: darkblue;
 }
 
 button {
   font-size: 20px;
+  border-radius: 4px;
 }
 
 .radio {
@@ -27,12 +28,6 @@ button {
   margin: 0px;
   /* align-self: start; */
 }
-/* .checkbox {
-  width: 14px;
-  height: 14px;
-  margin: 0px;
-} */
-
 
 .flexcontainer {
   margin: 4px;
@@ -48,8 +43,9 @@ button {
   /* height: ; */
   /* text-align: center; */
   text-align: left;
-  margin: 0px;
+  margin: 2px;
 }
+/* .item1 */
 
 .item2 {
   width: 100%;
@@ -69,9 +65,7 @@ button {
   border-color: pink;
   color: gray;
   margin: 0px;
-  border-radius: 4px;
-  
-  
+  /* width: 42px; */
 }
 
 #suika_btn {
@@ -79,8 +73,6 @@ button {
   border-color: rgb(153, 255, 153);
   color: gray;
   margin: 0px;
-  border-radius: 4px;
-  
 }
 
 #djz_btn {
@@ -88,7 +80,6 @@ button {
   border-radius: 4px;
   background-color: rgb(25, 167, 250);
   border-color: rgb(25, 167, 250);
-  
 }
 
 #tuika_btn {
@@ -96,23 +87,19 @@ button {
   border-radius: 4px;
   background-color: rgb(25, 167, 250);
   border-color: rgb(25, 167, 250);
-  
 }
 
 #hazure_btn {
   margin: 0 0 0 0px;
   border-radius: 4px;
   border-color: gray;
-  
 }
 
 #hosi_btn {
   margin: 0 0 0 0px;
-  border-radius: 4px;
   background-color: yellow;
   border-color: yellow;
   color: gray;
-  
 }
 
 #rep_btn {
@@ -120,11 +107,11 @@ button {
   border-radius: 4px;
   background-color: rgb(25, 167, 250);
   border-color: rgb(25, 167, 250);
-  
 }
 
 #hanbetu {
-  text-align: center;
+  margin: 0 0 0 0px;
+  background-color: #ccc;
 }
 
 .pink {
