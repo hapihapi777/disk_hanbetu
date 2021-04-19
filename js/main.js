@@ -1,7 +1,7 @@
 'use strict';
 {
   Button_General();
-  GetRadio();
+  // GetRadio();
 
   let accuracy = 1000000000000;
   let dankai = 4; //何段階設定か
@@ -32,14 +32,38 @@
     //総art
     let art = sou_art + djz_art + dt_art;
 
+    // 小役回数
+    let koyaku_all = cherry + suika + hazure + hosi + rep;
+    let koyaku_art = hazure + hosi + rep
+
     let result = [];
     let hiritu = [];
     let goukei = 0;
 
     let target = document.getElementById("target"); //ラジオボタン
     let s = target.hoge.value;
-    
-    if (s === 'nouse') {
+
+    // エラー表示
+    if (soukaiten <= 0 || soukaiten < art || soukaiten < koyaku_all
+      || art < koyaku_art) {
+      document.getElementById('error').textContent = "入力値を見直してください";
+      console.log('えらー');
+      return;
+    }
+
+    // 期待値算出
+    if (art <= 0) {
+      for (let i = 0; i < dankai; i++) {
+        hiritu.push(
+          CalcBinom(soukaiten, cherry, cherry_kakuritu)[i] // チェリーで期待値
+          * CalcBinom(soukaiten, suika, suika_kakuritu)[i] // スイカで期待値        
+          // * CalcBinom(art, hosi, hosi_kakuritu)[i] // art中の星で期待値
+          // * CalcBinom(art, hazure, hazure_kakuritu)[i] // art中ハズレで期待値
+          // * CalcBinom(art, rep, nabinasi_kakuritu)[i] // art中ナビなしリプで期待値
+        );
+        goukei += hiritu[i];
+      }
+    } else if (s === 'nouse') {
       for (let i = 0; i < dankai; i++) {
         hiritu.push(
           CalcBinom(soukaiten, cherry, cherry_kakuritu)[i] // チェリーで期待値
@@ -161,8 +185,8 @@
       document.getElementById('sou_art').value = parseInt(document.getElementById('sou_art').value) +
         parseInt(document.getElementById('dt_art').value) +
         parseInt(document.getElementById('djz_art').value);
-        document.getElementById('dt_art').value = 0;
-        document.getElementById('djz_art').value = 0;
+      document.getElementById('dt_art').value = 0;
+      document.getElementById('djz_art').value = 0;
     });
 
     // // djzボタンで総artに追加する(その後djz入力欄は0)
@@ -182,22 +206,22 @@
   }
 
   function GetRadio() {
-      let target = document.getElementById("target");
-      let s = target.hoge.value;
-      
-      // console.log(s);
-      // if(s === 'use') {
-      //   document.getElementById('rep_btn').disabled = false;
-      // }else if(s === 'nouse') {
-      //   document.getElementById('rep_btn').disabled = true;
-      // }
-      // let s;
-      if (target.hoge.checked) {
-        // s = target.hoge.value;
-        console.log(s);
-      }
+    let target = document.getElementById("target");
+    let s = target.hoge.value;
 
-      // return s;
+    // console.log(s);
+    // if(s === 'use') {
+    //   document.getElementById('rep_btn').disabled = false;
+    // }else if(s === 'nouse') {
+    //   document.getElementById('rep_btn').disabled = true;
+    // }
+    // let s;
+    if (target.hoge.checked) {
+      // s = target.hoge.value;
+      console.log(s);
+    }
+
+    // return s;
   }
 
 
